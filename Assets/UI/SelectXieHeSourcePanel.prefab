@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 4337345190933665542}
   - component: {fileID: 6408452409598007463}
   m_Layer: 5
-  m_Name: SelectSourcePanel
+  m_Name: SelectXieHeSourcePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
