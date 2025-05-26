@@ -24,6 +24,7 @@ public class TagItem : MonoBehaviour
 
     public void OnClick()
     {
+        print("点击率tagItem!");
         unionPage.TagItemSelect(this);
     }
 
