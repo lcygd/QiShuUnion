@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TagItem : MonoBehaviour
 {
 
-    [SerializeField] private UnionPage unionPage;
+    [SerializeField] private MainPage unionPage;
 
     [SerializeField] private Image mainIcon;
 
