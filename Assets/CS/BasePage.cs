@@ -18,6 +18,7 @@ public abstract class BasePage : MonoBehaviour
     {
         this.key = key;
         isInitialized = true;
+        Init();
     }
 
     /// <summary>
@@ -39,6 +40,14 @@ public abstract class BasePage : MonoBehaviour
     protected virtual void OnDestroy()
     {
         OnClose();
+    }
+
+    /// <summary>
+    /// 页面显示
+    /// </summary>
+    public virtual void Init()
+    {
+
     }
 
     /// <summary>

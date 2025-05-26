@@ -8,7 +8,7 @@ public class MainPage : BasePage
 
     [SerializeField] private List<PanelBase> panels;
 
-    [SerializeField] public  List<TagItem> tagItems;
+    [SerializeField] public List<TagItem> tagItems;
 
     [SerializeField] private RectTransform tagListContent;
 
@@ -19,7 +19,7 @@ public class MainPage : BasePage
 
     void Awake()
     {
-        if(Instance == null) Instance = this;
+        if (Instance == null) Instance = this;
     }
 
     void Start()
@@ -30,7 +30,7 @@ public class MainPage : BasePage
     public void TagItemSelect(TagItem selectItem)
     {
         index = tagItems.IndexOf(selectItem);
-        Debug.LogError("现在点击的TagItem的索引是："+index);
+        Debug.LogError("现在点击的TagItem的索引是：" + index);
         for (int i = 0; i < tagItems.Count; i++)
         {
             tagItems[i].SetSelect(selectItem == tagItems[i]);
@@ -42,8 +42,8 @@ public class MainPage : BasePage
     public void UpdatePanelsShow()
     {
         TagItem tagItem = tagItems[index];
-        Debug.LogError("tagItem.subIndex="+tagItem.subIndex);
-        if (isCreateProjectPanel==true)
+        Debug.LogError("tagItem.subIndex=" + tagItem.subIndex);
+        if (isCreateProjectPanel == true)
         {
             tagItem.subIndex = 1;
             isCreateProjectPanel = false;
@@ -53,15 +53,19 @@ public class MainPage : BasePage
         {
             print(i);
             print(panelIndex);
-            if(i == panelIndex)
+            if (i == panelIndex)
             {
-                Debug.LogError("显示："+panels[i].gameObject.name);
+                Debug.LogError("显示：" + panels[i].gameObject.name);
             }
             else
             {
-                Debug.LogError("不显示："+panels[i].gameObject.name);
+                Debug.LogError("不显示：" + panels[i].gameObject.name);
             }
             panels[i].gameObject.SetActive(i == panelIndex);
+            if (i == panelIndex)
+            {
+                panels[i].OnShow();
+            }
         }
     }
     public void OpenCreateProjectPanel()
