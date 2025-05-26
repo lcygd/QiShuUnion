@@ -21,10 +21,10 @@ public class SwitchBtn : MonoBehaviour
     }
 
     // 在编辑器模式下修改值时调用UpdateShow
-    private void OnValidate()
-    {
-        UpdateShow();
-    }
+    // private void OnValidate()
+    // {
+    //     UpdateShow();
+    // }
 
 
 }

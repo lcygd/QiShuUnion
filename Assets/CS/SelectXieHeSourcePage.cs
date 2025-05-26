@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class SelectXieHeSourcePage : BasePage
 {
-    // Start is called before the first frame update
-    void Start()
+    public void AchieveLauncher()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        base.Close();
+        CreateProjectPanel.Instance.ShowSelectLaunchData();
     }
 }
